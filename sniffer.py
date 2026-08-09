@@ -23,14 +23,25 @@ def analyze_packet(packet):
     destination_ip = packet[IP].dst
     packet_size = len(packet)
     timestamp = datetime.now().strftime("%H:%M:%S")
+
     # Analyze payload
     if packet.haslayer("Raw"):
         payload = bytes(packet["Raw"].load)
         payload_size = len(payload)
+
+        # Hexadecimal representation
         payload_preview = payload[:32].hex(" ")
+
+        # Try to extract readable text
+        readable_text = ''.join(
+            chr(byte) if 32 <= byte <= 126 else '.'
+            for byte in payload[:64]
+        )
+
     else:
         payload_size = 0
         payload_preview = "No payload"
+        readable_text = "No payload"
 
     # Identify protocol
     if TCP in packet:
@@ -45,18 +56,19 @@ def analyze_packet(packet):
     protocol_count[protocol] += 1
 
     print(f"\nPacket #{packet_count}")
-    print(f"Time        : {timestamp}")
-    print(f"Source IP   : {source_ip}")
-    print(f"Destination : {destination_ip}")
-    print(f"Protocol    : {protocol}")
-    print(f"Packet Size : {packet_size} bytes")
-    print(f"Payload Size: {payload_size} bytes")
-    print(f"Payload     : {payload_preview}")
+    print(f"Time          : {timestamp}")
+    print(f"Source IP     : {source_ip}")
+    print(f"Destination   : {destination_ip}")
+    print(f"Protocol      : {protocol}")
+    print(f"Packet Size   : {packet_size} bytes")
+    print(f"Payload Size  : {payload_size} bytes")
+    print(f"Payload Hex   : {payload_preview}")
+    print(f"Payload Text  : {readable_text}")
     print("-" * 50)
 
 
 print("=" * 50)
-print("          BASIC NETWORK SNIFFER")
+print("              BASIC NETWORK SNIFFER")
 print("=" * 50)
 print("\nCapturing 20 packets...")
 print("Generate some normal network traffic.\n")
@@ -64,7 +76,7 @@ print("Generate some normal network traffic.\n")
 sniff(count=20, prn=analyze_packet, store=False)
 
 print("\n" + "=" * 50)
-print("             PROTOCOL SUMMARY")
+print("              PROTOCOL SUMMARY")
 print("=" * 50)
 
 for protocol, count in protocol_count.items():
@@ -72,4 +84,5 @@ for protocol, count in protocol_count.items():
 
 print(f"\nTotal packets captured: {packet_count}")
 print("=" * 50)
+
 print("Capture completed!")
