@@ -49,19 +49,21 @@ Packet Size
 Payload
 After all 20 packets are processed, the program displays a summary showing how many packets belonged to each protocol.
 ## The basic working can be represented as:
-- Start Program
+'''text
+Start Program
       ↓
-- Capture Packets
+Capture Packets
       ↓
-- Analyze Packets
+Analyze Packets
       ↓
-- Extract Information
+Extract Information
       ↓
-- Display Packet Details
+Display Packet Details
       ↓
-- Count Protocols
+Count Protocols
       ↓
-- Display Protocol Summary
+Display Protocol Summary
+'''
 ## Packet Capture
 The first major part of the project is packet capturing.
 When I run the program, it displays:
