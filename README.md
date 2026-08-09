@@ -49,20 +49,20 @@ Packet Size
 Payload
 After all 20 packets are processed, the program displays a summary showing how many packets belonged to each protocol.
 ## The basic working can be represented as:
-Start Program
+- Start Program
       ↓
-Capture Packets
+- Capture Packets
       ↓
-Analyze Packets
+- Analyze Packets
       ↓
-Extract Information
+- Extract Information
       ↓
-Display Packet Details
+- Display Packet Details
       ↓
-Count Protocols
+- Count Protocols
       ↓
-Display Protocol Summary
-Packet Capture
+- Display Protocol Summary
+## Packet Capture
 The first major part of the project is packet capturing.
 When I run the program, it displays:
 BASIC NETWORK SNIFFER
@@ -74,28 +74,28 @@ I can generate normal network traffic by using the internet or other network act
 Once a packet is captured, the program processes it and displays its information.
 Information Displayed for Each Packet
 For every packet, the program displays information similar to:
-Packet #1
-Time          : 17:33:10
-Source IP     : 172.64.146.215
-Destination   : 192.168.0.105
-Protocol      : UDP
-Packet Size   : 632 bytes
-Packet Number
+- Packet #1
+- Time          : 17:33:10
+- Source IP     : 172.64.146.215
+- Destination   : 192.168.0.105
+- Protocol      : UDP
+- Packet Size   : 632 bytes
+Packet Number:
 The packet number tells us the order in which the packet was captured.
 For example:
-Packet #1
-Packet #2
-Packet #3
+- Packet #1
+- Packet #2
+- Packet #3
 This makes it easier to identify individual packets.
-Time
+- Time
 The time tells us when the packet was captured.
-Source IP
+- Source IP
 The source IP address tells us where the packet came from.
-In simple terms:
+1.In simple terms:
 Source IP = Sender
 Destination IP
 The destination IP address tells us where the packet is going.
-In simple terms:
+2.In simple terms:
 Destination IP = Receiver
 So we can understand the communication as:
 Source → Destination
@@ -103,15 +103,15 @@ Sender → Receiver
 ## Protocol
 The protocol tells us what type of network communication the packet is using.
 For example:
-TCP
-UDP
-ICMP
+- TCP
+- UDP
+- ICMP
 In our output, we can see:
 Protocol : UDP
 Packet Size
 Packet size tells us how much data the complete packet contains, measured in bytes.
 For example:
-Packet Size : 632 bytes
+- Packet Size : 632 bytes
 Understanding Protocols
 The program checks different protocols in the captured packets.
 ### TCP — Transmission Control Protocol
@@ -140,10 +140,10 @@ UDP is a connectionless protocol. It does not establish a connection before send
 Because it has less overhead than TCP, UDP can be faster, but it does not provide the same delivery guarantees as TCP.
 If a UDP packet is lost, UDP itself does not retransmit that packet.
 UDP is commonly used for applications where speed is important, such as:
-DNS
-Online gaming
-Live streaming
-Voice and video communication
+- DNS
+- Online gaming
+- Live streaming
+- Voice and video communication
 A simple representation is:
 Sender
    ↓
