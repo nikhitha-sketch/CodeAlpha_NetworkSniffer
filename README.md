@@ -125,7 +125,7 @@ Web communication such as HTTPS
 File transfers
 Email communication
 SSH connections
-**A simple example is:**
+### A simple example is:
 ```text
 Sender
    ↓
@@ -135,7 +135,8 @@ Send Data
    ↓
 Receiver
    ↓
-Acknowledgement```
+Acknowledgement
+```
 So, we can remember TCP as:
 TCP = Reliable and connection-oriented communication
 ### UDP — User Datagram Protocol
