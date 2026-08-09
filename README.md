@@ -168,8 +168,7 @@ If a packet doesn't match the protocols being specifically checked by our progra
 Understanding Payload
 One important part of this project is understanding the payload.
 A packet contains different types of information.
-We can think of it like this:
-'''text
+### We can think of it like this:
 Packet
 │
 ├── Header
@@ -177,7 +176,7 @@ Packet
 │
 └── Payload
       Data carried by the packet
-      '''
+
 For example, the header can contain information about the source, destination, and protocol.
 The payload contains the actual data carried by the packet.
 In our program, we check whether a packet contains a Raw layer. If it does, we can access its data.
@@ -192,7 +191,7 @@ Not every packet contains a Raw layer, so the program checks for it before tryin
 Protocol Summary
 After processing all the packets, the program displays a protocol summary.
 ### For example:
-'''text
+'''
 ==============================
        PROTOCOL SUMMARY
 ==============================
