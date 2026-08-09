@@ -148,11 +148,12 @@ UDP is commonly used for applications where speed is important, such as:
 - Live streaming
 - Voice and video communication
 A simple representation is:
+```text
 Sender
    ↓
 Send Data
    ↓
-Receiver
+Receiver```
 There is no connection establishment or acknowledgement mechanism like TCP.
 So, we can remember UDP as:
 UDP = Fast and connectionless communication
@@ -191,7 +192,7 @@ Not every packet contains a Raw layer, so the program checks for it before tryin
 Protocol Summary
 After processing all the packets, the program displays a protocol summary.
 ### For example:
-'''
+```text
 ==============================
        PROTOCOL SUMMARY
 ==============================
@@ -203,17 +204,17 @@ Other : 0
 
 Total packets captured: 20
 
-Capture completed!'''
+Capture completed!```
 This summary gives us a quick idea about the type of traffic that was captured.
 Instead of checking every packet individually, we can look at the summary and immediately understand how many packets belonged to each protocol.
 The result depends on the network traffic captured during that particular run.
 How Protocol Counting Works
 While processing each packet, the program keeps separate counters for the protocols.
 For example:
-TCP counter
-UDP counter
-ICMP counter
-Other counter
+- TCP counter
+- UDP counter
+- ICMP counter
+- Other counter
 Whenever a packet is identified as a particular protocol, its counter is increased.
 After all the packets have been processed, these counters are displayed in the protocol summary.
 For example, if 20 packets are identified as UDP packets:
@@ -226,12 +227,13 @@ BASIC NETWORK SNIFFER
 Capturing 20 packets...
 Generate some normal network traffic.
 
+```text
 Packet #1
 Time          : 17:33:10
 Source IP     : 172.64.146.215
 Destination   : 192.168.0.105
 Protocol      : UDP
-Packet Size   : 632 bytes
+Packet Size   : 632 bytes```
 The program continues displaying the captured packets and finally gives the protocol summary.
 ## What I Learned From This Project
 While working on this project, I learned both programming and networking concepts.
