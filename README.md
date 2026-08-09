@@ -1,5 +1,6 @@
-Basic Network Sniffer
-Project Overview
+## Basic Network Sniffer
+
+# Project Overview
 I developed this Basic Network Sniffer using Python as part of my CodeAlpha Cyber Security Internship.
 A network sniffer is a program that captures the data packets moving through a network and displays useful information about them.
 Whenever we use the internet, our computer continuously sends and receives packets. These packets contain information about the communication between devices.
