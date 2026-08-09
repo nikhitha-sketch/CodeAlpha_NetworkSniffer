@@ -163,7 +163,7 @@ ping google.com
 ICMP messages can be used to check whether a destination is reachable and to measure the response time.
 So, we can remember ICMP as:
 ICMP = Network diagnostics and control messages
-Other:
+### Other:
 If a packet doesn't match the protocols being specifically checked by our program, it is counted under Other.
 Understanding Payload
 One important part of this project is understanding the payload.
@@ -189,7 +189,7 @@ So this code basically allows the program to access the raw data carried by the 
 Not every packet contains a Raw layer, so the program checks for it before trying to access it.
 Protocol Summary
 After processing all the packets, the program displays a protocol summary.
-For example:
+### For example:
 ==============================
        PROTOCOL SUMMARY
 ==============================
