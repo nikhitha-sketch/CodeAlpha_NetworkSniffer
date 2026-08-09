@@ -1,6 +1,6 @@
-## Basic Network Sniffer
+# Basic Network Sniffer
 
-# Project Overview
+## Project Overview
 I developed this Basic Network Sniffer using Python as part of my CodeAlpha Cyber Security Internship.
 A network sniffer is a program that captures the data packets moving through a network and displays useful information about them.
 Whenever we use the internet, our computer continuously sends and receives packets. These packets contain information about the communication between devices.
@@ -13,7 +13,7 @@ Packet size
 Packet capture time
 Payload information
 After capturing the packets, the program also gives a protocol summary, which shows how many packets were captured using TCP, UDP, ICMP, and other protocols.
-Objective
+## Objective
 The main objective of this project is to understand how network packets are captured and analyzed using Python.
 Through this project, I wanted to learn how to:
 Capture network traffic.
@@ -24,17 +24,17 @@ Calculate the size of packets.
 Access the data carried inside packets.
 Count packets based on their protocols.
 Display the captured information in a simple format.
-Technologies Used
-Python 3
+## Technologies Used
+- Python 3
 I used Python to write the complete program and implement the packet-capturing and analysis logic.
-Scapy
+- Scapy
 I used the Scapy Python library for working with network packets.
 Scapy allows us to capture packets and access different parts of a packet, such as IP information, protocol information, and raw data.
 Command Prompt
 I used Windows Command Prompt to run the Python program and display the captured packet information.
-Windows
+- Windows
 The project was developed and tested on a Windows system.
-How the Project Works
+## How the Project Works
 The project works in a simple sequence.
 First, the program starts and displays the name of the project.
 Then it starts capturing network packets.
@@ -48,7 +48,7 @@ Protocol
 Packet Size
 Payload
 After all 20 packets are processed, the program displays a summary showing how many packets belonged to each protocol.
-The basic working can be represented as:
+## The basic working can be represented as:
 Start Program
       ↓
 Capture Packets
@@ -100,7 +100,7 @@ Destination IP = Receiver
 So we can understand the communication as:
 Source → Destination
 Sender → Receiver
-Protocol
+## Protocol
 The protocol tells us what type of network communication the packet is using.
 For example:
 TCP
@@ -114,7 +114,7 @@ For example:
 Packet Size : 632 bytes
 Understanding Protocols
 The program checks different protocols in the captured packets.
-TCP — Transmission Control Protocol
+### TCP — Transmission Control Protocol
 TCP stands for Transmission Control Protocol.
 TCP is a connection-oriented and reliable protocol. Before sending data, it establishes a connection between the sender and receiver.
 TCP makes sure that data reaches the destination correctly and in the proper order. If some data is lost during transmission, TCP can retransmit it.
@@ -135,8 +135,7 @@ Receiver
 Acknowledgement
 So, we can remember TCP as:
 TCP = Reliable and connection-oriented communication
-UDP — User Datagram Protocol
-UDP stands for User Datagram Protocol.
+### UDP — User Datagram Protocol
 UDP is a connectionless protocol. It does not establish a connection before sending data.
 Because it has less overhead than TCP, UDP can be faster, but it does not provide the same delivery guarantees as TCP.
 If a UDP packet is lost, UDP itself does not retransmit that packet.
@@ -155,8 +154,7 @@ There is no connection establishment or acknowledgement mechanism like TCP.
 So, we can remember UDP as:
 UDP = Fast and connectionless communication
 UDP : 20
-ICMP — Internet Control Message Protocol
-ICMP stands for Internet Control Message Protocol.
+### ICMP — Internet Control Message Protocol.
 ICMP is mainly used for network error reporting, diagnostics, and control messages.
 It is not normally used to transfer application data like TCP or UDP.
 One common example is the ping command.
@@ -218,7 +216,7 @@ Whenever a packet is identified as a particular protocol, its counter is increas
 After all the packets have been processed, these counters are displayed in the protocol summary.
 For example, if 20 packets are identified as UDP packets:
 UDP : 20
-Final Output
+## Final Output
 After fixing the errors, the program successfully started capturing packets.
 The output looked like:
 BASIC NETWORK SNIFFER
@@ -233,7 +231,7 @@ Destination   : 192.168.0.105
 Protocol      : UDP
 Packet Size   : 632 bytes
 The program continues displaying the captured packets and finally gives the protocol summary.
-What I Learned From This Project
+## What I Learned From This Project
 While working on this project, I learned both programming and networking concepts.
 I learned how to use Python for a practical cybersecurity project.
 I also learned how network packets contain different types of information and how this information can be accessed programmatically.
@@ -250,7 +248,7 @@ Packet capturing
 Protocol counting
 Basic network traffic analysis
 I also improved my Python debugging skills by fixing errors such as IndentationError and SyntaxError.
-Conclusion
+## Conclusion
 This project helped me understand the basics of network traffic monitoring and packet analysis using Python.
 By creating the Basic Network Sniffer, I was able to capture packets, extract important information from them, identify protocols, and generate a simple summary of the captured traffic.
 Although this is a basic implementation, it gave me a practical understanding of how packet analysis works and how Python can be used in cybersecurity.
