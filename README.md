@@ -49,7 +49,7 @@ Packet Size
 Payload
 After all 20 packets are processed, the program displays a summary showing how many packets belonged to each protocol.
 ## The basic working can be represented as:
-'''text
+```text
 Start Program
       ↓
 Capture Packets
@@ -63,7 +63,7 @@ Display Packet Details
 Count Protocols
       ↓
 Display Protocol Summary
-'''
+```
 ## Packet Capture
 The first major part of the project is packet capturing.
 When I run the program, it displays:
@@ -125,7 +125,8 @@ Web communication such as HTTPS
 File transfers
 Email communication
 SSH connections
-A simple example is:
+**A simple example is:**
+```text
 Sender
    ↓
 Establish Connection
@@ -134,7 +135,7 @@ Send Data
    ↓
 Receiver
    ↓
-Acknowledgement
+Acknowledgement```
 So, we can remember TCP as:
 TCP = Reliable and connection-oriented communication
 ### UDP — User Datagram Protocol
