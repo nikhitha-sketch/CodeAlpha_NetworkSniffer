@@ -125,7 +125,7 @@ Web communication such as HTTPS
 File transfers
 Email communication
 SSH connections
-### A simple example is:
+A simple example is:
 ```text
 Sender
    ↓
@@ -158,8 +158,7 @@ Receiver
 ```
 There is no connection establishment or acknowledgement mechanism like TCP.
 So, we can remember UDP as:
-UDP = Fast and connectionless communication
-UDP : 20
+UDP = Fast and connectionless communication.
 ### ICMP — Internet Control Message Protocol.
 ICMP is mainly used for network error reporting, diagnostics, and control messages.
 It is not normally used to transfer application data like TCP or UDP.
