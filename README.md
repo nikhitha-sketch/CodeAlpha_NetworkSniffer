@@ -169,12 +169,9 @@ Understanding Payload
 One important part of this project is understanding the payload.
 A packet contains different types of information.
 ### We can think of it like this:
-Packet
-│
-├── Header
-│     Information used for communication
-│
-└── Payload
+Packet->
+->Header Information used for communication
+─> Payload
       Data carried by the packet
 
 For example, the header can contain information about the source, destination, and protocol.
