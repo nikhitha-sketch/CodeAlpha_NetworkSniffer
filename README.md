@@ -25,14 +25,14 @@ Access the data carried inside packets.
 Count packets based on their protocols.
 Display the captured information in a simple format.
 ## Technologies Used
-- Python 3
+- Python 3:
 I used Python to write the complete program and implement the packet-capturing and analysis logic.
-- Scapy
+- Scapy:
 I used the Scapy Python library for working with network packets.
 Scapy allows us to capture packets and access different parts of a packet, such as IP information, protocol information, and raw data.
-Command Prompt
+- Command Prompt:
 I used Windows Command Prompt to run the Python program and display the captured packet information.
-- Windows
+- Windows:
 The project was developed and tested on a Windows system.
 ## How the Project Works
 The project works in a simple sequence.
