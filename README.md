@@ -148,13 +148,14 @@ UDP is commonly used for applications where speed is important, such as:
 - Online gaming
 - Live streaming
 - Voice and video communication
-A simple representation is:
+### A simple representation is:
 ```text
 Sender
    ↓
 Send Data
    ↓
-Receiver```
+Receiver
+```
 There is no connection establishment or acknowledgement mechanism like TCP.
 So, we can remember UDP as:
 UDP = Fast and connectionless communication
@@ -205,7 +206,8 @@ Other : 0
 
 Total packets captured: 20
 
-Capture completed!```
+Capture completed!
+```
 This summary gives us a quick idea about the type of traffic that was captured.
 Instead of checking every packet individually, we can look at the summary and immediately understand how many packets belonged to each protocol.
 The result depends on the network traffic captured during that particular run.
